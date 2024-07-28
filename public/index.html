@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--    custom font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+  <!-- nav CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" , type="text/css">
+
+
+  <!-- header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" , type="text/css">
+
+  <!-- compose tweet CSS -->
+  <link rel="stylesheet" href="/styles/compose-tweet.css" , type="text/css">
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="tweeter-header">tweeter</span>
+    <div>
+      <span class="write-tweet"><b>Write</b> a tweet</span>
+      <i class="fas fa-angle-double-down"></i>
+    </div>
+  </nav>
+  <header>
+    <div class="profile-pic">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Your Name</h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container"></main>
+  <section class="tweeting">
+    <h2>Compose Tweet</h2>
+    <form class="tweet-form" action="/tweets" method="POST">
+      <label for="tweet-text">What are you humming about</label>
+      <textarea class="tweet-box" name="text" id="tweet-text"></textarea>
+      <div class="tweet-controls">
+        <button class="tweet-button" type="submit">TWEET</button>
+        <output name="counter" class="number-counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
   </body>
+
 </html>
